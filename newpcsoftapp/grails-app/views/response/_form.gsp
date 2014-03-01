@@ -15,8 +15,6 @@
 		<g:message code="response.complaint.label" default="Complaint" />
 		<span class="required-indicator">*</span>
 	</label>
-	<!--<g:select id="complaint" name="complaint.id" from="${newpcsoftapp.Complaint.list()}" optionKey="id" required="" value="${responseInstance?.complaint?.id}" class="many-to-one"/>
--->
-	<g:hiddenField name="complaint.id" value="${complaintInstance.id}"/>${complaintInstance.subject}
-	</div>
+	<g:select id="complaint" name="complaint.id" from="${newpcsoftapp.Complaint.list()}" optionKey="id" required="" value="${responseInstance?.complaint?.id}" class="many-to-one"/>
+</div>
 
