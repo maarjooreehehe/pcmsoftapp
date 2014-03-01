@@ -1,45 +1,11 @@
 package newpcsoftapp
 
-
-
 import org.springframework.dao.DataIntegrityViolationException
 
-class DistributorController extends DistributorBaseController{
+class DistributorController {
 
-	def beforeInterceptor = [action:this.&auth,except:['login', 'logout']]
-	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
-	
-	def login = {
-		if (request.method == "GET") {
-			session.username = null
-			def distributor = new Distributor()
-		}
-		else {
-		
-		def distributor = Distributor.findByUsernameAndPassword(params.username,params.password)
-		if (distributor) {
-			session.username = distributor.username
-			//redirect(controller:'room')
-			def redirectParams =session.originalRequestParams?session.originalRequestParams:[controller:'distributor']
-			redirect(controller: 'response', action: 'create')
-		}
-
-		else {
-		flash['message'] = 'Please enter a valid username and password'
-		}
-
-	}
-	}
-	
-	def logout = {
-		session.accountId = null
-		flash.message = 'Successfully logged out'
-		redirect(controller:'distributor', action:'list')
-	}
-	
-	
     def index() {
         redirect(action: "list", params: params)
     }
@@ -61,7 +27,7 @@ class DistributorController extends DistributorBaseController{
         }
 
         flash.message = message(code: 'default.created.message', args: [message(code: 'distributor.label', default: 'Distributor'), distributorInstance.id])
-        redirect(action: "show", id: distributorInstance.id)
+        redirect(action: "login", id: distributorInstance.id)
     }
 
     def show(Long id) {
@@ -133,4 +99,32 @@ class DistributorController extends DistributorBaseController{
             redirect(action: "show", id: id)
         }
     }
+	
+	def login = {
+		if (request.method == "GET") {
+			session.username = null
+			def distributor = new Distributor()
+		}
+		else {
+		
+		def distributor = Distributor.findByUsernameAndPassword(params.username,params.password)
+		if (distributor) {
+			session.username = distributor.username
+			//redirect(controller:'room')
+			def redirectParams =session.originalRequestParams?session.originalRequestParams:[controller:'distributor']
+			redirect(controller: 'response', action: 'create')
+		}
+
+		else {
+		flash['message'] = 'Please enter a valid username and password'
+		}
+
+	}
+	}
+	
+	def logout = {
+		session.accountId = null
+		flash.message = 'Successfully logged out'
+		redirect(controller:'distributor', action:'list')
+	}
 }

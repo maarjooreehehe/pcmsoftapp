@@ -27,7 +27,7 @@
 								<center>	<label for='username'>Username:</label></center>
 								</td>
 								<td valign='top' class='value '>
-									<input type="text" maxlength='8'
+									<input type="text" maxlength='13'
 										name='username'
 										value='${distributor?.username}'>
 									</input>

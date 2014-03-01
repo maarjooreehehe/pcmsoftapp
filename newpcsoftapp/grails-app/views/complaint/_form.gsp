@@ -3,12 +3,9 @@
 
 
 <div class="fieldcontain ${hasErrors(bean: complaintInstance, field: 'consumer', 'error')} required">
-	<label for="consumer">
-		<g:message code="complaint.consumer.label" default="Consumer" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="consumer" name="consumer.id" from="${newpcsoftapp.Consumer.list()}" optionKey="id" required="" value="${complaintInstance?.consumer?.id}" class="many-to-one"/>
-</div>
+	
+	<!-- <g:select id="consumer" name="consumer.id" from="${newpcsoftapp.Consumer.list()}" optionKey="id" required="" value="${complaintInstance?.consumer?.id}" class="many-to-one"/>
+</div> -->
 
 <div class="fieldcontain ${hasErrors(bean: complaintInstance, field: 'subject', 'error')} ">
 	<label for="subject">
