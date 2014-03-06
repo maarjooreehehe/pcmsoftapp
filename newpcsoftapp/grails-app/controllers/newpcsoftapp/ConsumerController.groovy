@@ -111,7 +111,7 @@ class ConsumerController {
 		def consumer = Consumer.findByUsernameAndPassword(params.username,params.password)
 		if (consumer) {
 			session.username = consumer.username
-			//redirect(controller:'room')
+			session.userId = consumer.id
 			def redirectParams =session.originalRequestParams?session.originalRequestParams:[controller:'consumer']
 			redirect(controller: 'complaint', action:'create')
 		}

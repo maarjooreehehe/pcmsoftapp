@@ -1,22 +1,38 @@
 <%@ page import="newpcsoftapp.Consumer" %>
 
-
-
-<div class="fieldcontain ${hasErrors(bean: consumerInstance, field: 'username', 'error')} ">
-	<label for="username">
-		<g:message code="consumer.username.label" default="Username" />
-		
-	</label>
-	<g:textField name="username" value="${consumerInstance?.username}"/>
+<div class="dialog" align="center">
+						<table>
+							<tr class='prop'>
+								<td valign='top' class='name'>
+								<center>	<label for='username'>Username:</label></center>
+								</td>
+								<td valign='top' class='value '>
+									<input type="text" maxlength='8'
+										name='username'
+										value='${consumer?.username}'
+										class="required input_field"
+										>
+									</input>
+								</td>
+							</tr>
+							<tr class='prop'>
+								<td valign='top' class='name'>
+								<center>	<label for='password'>Password:</label></center>
+								</td></br>
+								<td valign='top' class='value '>
+									<input type="password" maxlength='8'
+									name='password'
+									value='${consumer?.password}'
+									class="required input_field"
+									>
+									</input>
+								
+								</td>
+							</tr>
+						</table>
 </div>
+					
 
-<div class="fieldcontain ${hasErrors(bean: consumerInstance, field: 'password', 'error')} ">
-	<label for="password">
-		<g:message code="consumer.password.label" default="Password" />
-		
-	</label>
-	<g:textField name="password" value="${consumerInstance?.password}"/>
-</div>
 <!--	
 <div class="fieldcontain ${hasErrors(bean: consumerInstance, field: 'complaint', 'error')} ">
 	<label for="complaint">
@@ -34,5 +50,5 @@
 </li>
 </ul>
 -->
-</div>
+
 

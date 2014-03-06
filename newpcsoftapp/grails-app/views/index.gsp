@@ -1,122 +1,79 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
-		<style type="text/css" media="screen">
-			#status {
-				background-color: #eee;
-				border: .2em solid #fff;
-				margin: 2em 2em 1em;
-				padding: 1em;
-				width: 12em;
-				float: left;
-				-moz-box-shadow: 0px 0px 1.25em #ccc;
-				-webkit-box-shadow: 0px 0px 1.25em #ccc;
-				box-shadow: 0px 0px 1.25em #ccc;
-				-moz-border-radius: 0.6em;
-				-webkit-border-radius: 0.6em;
-				border-radius: 0.6em;
-			}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
 
-			.ie6 #status {
-				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
-			}
+<meta name="layout" content="main"/>
+<title>PCMA</title>
 
-			#status ul {
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
+</head>
+<body>
 
-			#status li {
-				line-height: 1.3;
-			}
-
-			#status h1 {
-				text-transform: uppercase;
-				font-size: 1.1em;
-				margin: 0 0 0.3em;
-			}
-
-			#page-body {
-				margin: 2em 1em 1.25em 18em;
-			}
-
-			h2 {
-				margin-top: 1em;
-				margin-bottom: 0.3em;
-				font-size: 1em;
-			}
-
-			p {
-				line-height: 1.5;
-				margin: 0.25em 0;
-			}
-
-			#controller-list ul {
-				list-style-position: inside;
-			}
-
-			#controller-list li {
-				line-height: 1.3;
-				list-style-position: inside;
-				margin: 0.25em 0;
-			}
-
-			@media screen and (max-width: 480px) {
-				#status {
-					display: none;
-				}
-
-				#page-body {
-					margin: 0 1em 1em;
-				}
-
-				#page-body h1 {
-					margin-top: 0;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div id="status" role="complementary">
-			<h1>Application Status</h1>
-			<ul>
-				<li>App version: <g:meta name="app.version"/></li>
-				<li>Grails version: <g:meta name="app.grails.version"/></li>
-				<li>Groovy version: ${GroovySystem.getVersion()}</li>
-				<li>JVM version: ${System.getProperty('java.version')}</li>
-				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
-				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
-				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
-				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
-				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
-			</ul>
-			<h1>Installed Plugins</h1>
-			<ul>
-				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-					<li>${plugin.name} - ${plugin.version}</li>
-				</g:each>
-			</ul>
-		</div>
-		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
-
-			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
+<div id="templamteo_body_wrapper">
+<div id="templatemo_wrapper">
+	<div id="templatemo_main_top"></div>
+    <div id="templatemo_main">
+    
+    	<div id="templatemo_sidebar">
+        	
+            <div id="site_title"><h1><a href="/newpcsoftapp" rel="nofollow">Website Name</a><span><a href="#" target="_blank">Power Consumption Monitoring Software Application (PCMSA)</a></span></h1></div>
+            
+            <div id="templatemo_menu">
+                <ul>
+                    <li><a href="${createLink(uri: '/')}" class="current">Home</a></li>
+					<li><a href="/newpcsoftapp/consumer/login">Login</a></li>
+					<li><a href="#">Monitoring Portal</a></li>
+                    <li><a href="#">Devices</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+           
+                				
 			</div>
-		</div>
-	</body>
+            
+            <div class="sb_box">
+	            <h3>Search</h3>
+            	<div id="search">
+                    <form action="#" method="get">
+                        <input type="text" value="Search" name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                        <input type="submit" name="Search" value="Search" id="searchbutton" title="Search" />
+                    </form>
+				</div>
+            </div>
+            
+			
+            
+            <div class="cleaner"></div>
+        </div> <!-- end of sidebar -->
+        
+        <div id="templatemo_content">
+        	
+            <div id="slider">
+            	<img src="images/slideshow/ILPIHotlines.jpg" alt="Image 5" title="We are just one call away! We are so dear to serve you. :)" />
+				<img src="images/slideshow/PayOnline.jpg" alt="Image 1" title="Pay your bills online. It is fast and easy!" />
+                <img src="images/slideshow/ElectricSafety Tips.jpg" alt="Image 2" title="Tip: Avoid flying kites near electric transmission and distribution lines." />
+                <img src="images/slideshow/RA7832.jpg" alt="Image 3" title="Do not steal electricity. Be a responsible citizen!" />
+                <img src="images/slideshow/OfficeHours.jpg" alt="Image 4" title="Inquire to us now. We are so excited to serve you. :)" />
+        	</div>
+            
+            <div class="content_box">
+            	<h2>Welcome to Mirax Development</h2>
+                <p>"The best part is that I know my exact energy footprint pattern and can control it. I know what is waste vs. necessity. I have completely eliminated expensive and unnecessary consumption." </br><em>-Chris Hunt, San Carlos CA</em></p>
+             
+            </div>
+            
+            
+        </div> <!-- end of content -->
+		
+		
+    	<div class="cleaner"></div>
+    </div> <!-- end of main -->
+    <div id="templatemo_footer">
+    
+        Copyright &#169; 2014 <a href="/">Mirax Development - Power Consumption Monitoring Software Application</a>
+        
+    </div> <!-- end of templatemo_footer -->
+</div> <!-- end of wrapper -->
+</div>
+<g:javascript src = "logging.js" />
+
+</body>
 </html>
