@@ -6,14 +6,13 @@ class Consumer {
 	String password
 	
 	static hasMany = [complaint: Complaint]
+	String toString() { return username}
 
     static constraints = {
 	username(unique:true)
 	password()
     }
 	
-	String toString(){
-	"${this.username}"
-	}
+	
 }
 

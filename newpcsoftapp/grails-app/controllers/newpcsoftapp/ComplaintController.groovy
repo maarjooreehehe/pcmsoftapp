@@ -1,7 +1,5 @@
 package newpcsoftapp
 
-
-
 import org.springframework.dao.DataIntegrityViolationException
 
 class ComplaintController {

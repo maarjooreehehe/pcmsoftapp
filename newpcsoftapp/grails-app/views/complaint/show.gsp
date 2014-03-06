@@ -23,15 +23,6 @@
 			</g:if>
 			<ol class="property-list complaint">
 			
-				<g:if test="${complaintInstance?.consumer}">
-				<li class="fieldcontain">
-					<span id="consumer-label" class="property-label"><g:message code="complaint.consumer.label" default="Consumer" /></span>
-					
-						<span class="property-value" aria-labelledby="consumer-label"><g:link controller="consumer" action="show" id="${complaintInstance?.consumer?.id}">${complaintInstance?.consumer?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${complaintInstance?.dateCreated}">
 				<li class="fieldcontain">
 					<span id="dateCreated-label" class="property-label"><g:message code="complaint.dateCreated.label" default="Date Created" /></span>
@@ -73,7 +64,6 @@
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${complaintInstance?.id}" />
 					<g:link class="edit" action="edit" id="${complaintInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:link class="edit" action="create" id="${complaintInstance?.id}" controller="response">Reply</g:link>
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>

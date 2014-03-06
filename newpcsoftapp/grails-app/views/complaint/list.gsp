@@ -24,8 +24,6 @@
 				<thead>
 					<tr>
 					
-						<th><g:message code="complaint.consumer.label" default="Consumer" /></th>
-					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'complaint.dateCreated.label', default: 'Date Created')}" />
 					
 						<g:sortableColumn property="subject" title="${message(code: 'complaint.subject.label', default: 'Subject')}" />
@@ -40,9 +38,7 @@
 				<g:each in="${complaintInstanceList}" status="i" var="complaintInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${complaintInstance.id}">${fieldValue(bean: complaintInstance, field: "consumer")}</g:link></td>
-					
-						<td><g:formatDate date="${complaintInstance.dateCreated}" /></td>
+						<td><g:link action="show" id="${complaintInstance.id}">${fieldValue(bean: complaintInstance, field: "dateCreated")}</g:link></td>
 					
 						<td>${fieldValue(bean: complaintInstance, field: "subject")}</td>
 					

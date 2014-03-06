@@ -8,10 +8,13 @@ class Complaint {
 	String messageType
 	String body
 	
-	Consumer consumer
+	
+	static belongsTo = [Consumer]
+	
+	
 	
     static constraints = {
-	consumer()
+	
 	dateCreated()
 	subject()
 	messageType()
