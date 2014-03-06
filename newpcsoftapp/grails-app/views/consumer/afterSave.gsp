@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-<meta name="layout" content="main"/>
+<meta name="layout" content="mainafterLogin"/>
 <title>PCMA</title>
 
 </head>
@@ -20,7 +20,7 @@
             <div id="templatemo_menu">
                 <ul>
                     <li><a href="${createLink(uri: '/')}" class="current">Home</a></li>
-					<li><a href="/newpcsoftapp/consumer/logout">Logout</a></li>
+					<li><a href="/newpcsoftapp/consumer/login">Login</a></li>
 					<li><a href="#">Monitoring Portal</a></li>
                     <li><a href="#">Devices</a></li>
                     <li><a href="#">Contact Us</a></li>

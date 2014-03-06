@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-<meta name="layout" content="main"/>
+<meta name="layout" content="mainafterLogin"/>
 <title>PCMA</title>
 
 </head>

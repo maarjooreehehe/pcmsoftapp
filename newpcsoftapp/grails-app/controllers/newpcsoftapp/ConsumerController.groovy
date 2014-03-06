@@ -27,8 +27,32 @@ class ConsumerController {
         }
 
         flash.message = message(code: 'default.created.message', args: [message(code: 'consumer.label', default: 'Consumer'), consumerInstance.id])
-        redirect(action: "login", id: consumerInstance.id)
+        redirect(action: "afterSave", id: consumerInstance.id)
     }
+	
+	def afterSave(Long id) {
+        def consumerInstance = Consumer.get(id)
+        if (!consumerInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'consumer.label', default: 'Consumer'), id])
+            redirect(action: "list")
+            return
+        }
+
+        [consumerInstance: consumerInstance]
+    }
+	
+		def logoutPage(Long id) {
+        def consumerInstance = Consumer.get(id)
+        if (!consumerInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'consumer.label', default: 'Consumer'), id])
+            redirect(action: "list")
+            return
+        }
+
+        [consumerInstance: consumerInstance]
+    }
+	
+	
 
     def show(Long id) {
         def consumerInstance = Consumer.get(id)
@@ -40,7 +64,9 @@ class ConsumerController {
 
         [consumerInstance: consumerInstance]
     }
-
+	
+	
+	
     def edit(Long id) {
         def consumerInstance = Consumer.get(id)
         if (!consumerInstance) {
@@ -111,9 +137,9 @@ class ConsumerController {
 		def consumer = Consumer.findByUsernameAndPassword(params.username,params.password)
 		if (consumer) {
 			session.username = consumer.username
-			session.userId = consumer.id
+			//redirect(controller:'room')
 			def redirectParams =session.originalRequestParams?session.originalRequestParams:[controller:'consumer']
-			redirect(controller: 'complaint', action:'create')
+			redirect(controller: 'consumer', action:'logoutPage')
 		}
 
 		else {
@@ -123,9 +149,10 @@ class ConsumerController {
 	}
 	}
 	
+	
 	def logout = {
 		session.accountId = null
 		flash.message = 'Successfully logged out'
-		redirect(controller:'consumer', action:'list')
+		render(view: 'afterSave')
 	}
 }

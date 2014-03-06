@@ -26,3 +26,12 @@
 	<g:textField name="body" value="${complaintInstance?.body}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: complaintInstance, field: 'owner', 'error')} required">
+	<label for="owner">
+		<g:message code="complaint.owner.label" default="Owner" />
+		<span class="required-indicator">*</span>
+	</label>
+	</br>
+	<g:hiddenField id="owner" name="owner.id" from="${newpcsoftapp.Consumer.list()}" optionKey="id" required="" value="${complaintInstance?.owner?.id}" class="many-to-one"/>
+</div>
+
