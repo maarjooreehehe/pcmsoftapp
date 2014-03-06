@@ -32,8 +32,6 @@
 					
 						<g:sortableColumn property="body" title="${message(code: 'complaint.body.label', default: 'Body')}" />
 					
-						<th><g:message code="complaint.owner.label" default="Owner" /></th>
-					
 					</tr>
 				</thead>
 				<tbody>
@@ -47,8 +45,6 @@
 						<td>${fieldValue(bean: complaintInstance, field: "messageType")}</td>
 					
 						<td>${fieldValue(bean: complaintInstance, field: "body")}</td>
-					
-						<td>${fieldValue(bean: complaintInstance, field: "owner")}</td>
 					
 					</tr>
 				</g:each>

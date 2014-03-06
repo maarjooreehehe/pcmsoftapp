@@ -7,7 +7,7 @@ class Complaint {
 	String subject
 	String messageType
 	String body
-	Consumer owner
+	
 	
 	static belongsTo = [Consumer]
 	

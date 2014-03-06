@@ -59,15 +59,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${complaintInstance?.owner}">
-				<li class="fieldcontain">
-					<span id="owner-label" class="property-label"><g:message code="complaint.owner.label" default="Owner" /></span>
-					
-						<span class="property-value" aria-labelledby="owner-label"><g:link controller="consumer" action="show" id="${complaintInstance?.owner?.id}">${complaintInstance?.owner?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">
