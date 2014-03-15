@@ -109,13 +109,12 @@ class DistributorController {
 		
 		def distributor = Distributor.findByUsernameAndPassword(params.username,params.password)
 		if (distributor) {
-			session.username = 'super'
+			session.username = distributor.username
 			//redirect(controller:'room')
 			def redirectParams =session.originalRequestParams?session.originalRequestParams:[controller:'distributor']
-			redirect(controller: 'response', action: 'create')
-			
-		}
-
+			redirect(controller: 'distributor', action: 'index')
+			}
+		
 		else {
 		flash['message'] = 'Please enter a valid username and password'
 		}
