@@ -10,6 +10,9 @@
 		<div align="center">
 			<h2>This page is restricted for system administrator only.</h2>
 		</div>
+			<br>
+			<a class="btn" href="http://localhost:8080/newpcsoftapp/">Home</a>
+			<br><br>
 			<h3>Please log in</h3>
 				<g:if test="${flash.message}">
 					<div class="message">${flash.message}</div>
@@ -54,6 +57,10 @@
 						</span>
 					</div>
 			</g:form>
+			
+			
+			
+			
 </div>
 </body>
 </html>

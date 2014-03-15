@@ -124,6 +124,7 @@ class DistributorController {
 	
 	def logout = {
 		session.accountId = null
+		session.username = null
 		flash.message = 'Successfully logged out'
 		redirect(controller:'distributor', action:'list')
 	}

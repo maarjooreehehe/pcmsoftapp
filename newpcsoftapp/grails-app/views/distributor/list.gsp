@@ -13,6 +13,12 @@
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<g:if test="${!session.username}">
+				<li><a class="logout" href="/newpcsoftapp/distributor/login">Login</a></li>
+				</g:if>
+				<g:else>
+				<li><a class="logout" href="/newpcsoftapp/distributor/logout">Logout</a></li>
+				</g:else>
 			</ul>
 		</div>
 		<div id="list-distributor" class="content scaffold-list" role="main">
