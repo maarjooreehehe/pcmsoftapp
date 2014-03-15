@@ -152,6 +152,7 @@ class ConsumerController {
 	
 	def logout = {
 		session.accountId = null
+		session.username = null
 		flash.message = 'Successfully logged out'
 		render(view: 'afterSave')
 	}

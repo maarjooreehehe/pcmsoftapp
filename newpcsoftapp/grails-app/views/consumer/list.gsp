@@ -20,7 +20,12 @@
             <div id="templatemo_menu">
                 <ul>
                     <li><a href="${createLink(uri: '/')}" class="current">Home</a></li>
-					<li><a href="/newpcsoftapp/consumer/logout">Logout</a></li>
+					<g:if test="${!session.username}">
+						<li><a class="logout" href="/newpcsoftapp/consumer/login">Login</a></li>
+					</g:if>
+					<g:else>
+						<li><a class="logout" href="/newpcsoftapp/consumer/logout">Logout</a></li>
+					</g:else>
 					<li><a href="/newpcsoftapp/complaint/create">Create</a></li>
 					<li><a href="#">Monitoring Portal</a></li>
                     <li><a href="#">Devices</a></li>
