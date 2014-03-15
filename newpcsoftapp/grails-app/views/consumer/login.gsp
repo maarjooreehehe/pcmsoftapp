@@ -99,6 +99,8 @@
             </div>
             
          No account? Sign up <a href="/newpcsoftapp/consumer/create">here</a>!
+		 <br>
+		 For Distributor's account, sign in <a href="/newpcsoftapp/distributor/login">here</a>.
         </div> <!-- end of content -->
 		
 		

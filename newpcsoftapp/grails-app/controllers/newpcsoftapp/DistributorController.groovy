@@ -113,6 +113,13 @@ class DistributorController {
 			//redirect(controller:'room')
 			def redirectParams =session.originalRequestParams?session.originalRequestParams:[controller:'distributor']
 			redirect(controller: 'response', action: 'create')
+			
+			if (session.username == 'admin') {
+				redirect (controller:'consumer', action:'index')
+			}
+			else{
+			flash['message'] = 'Please enter a valid username and password'
+			}
 		}
 
 		else {
