@@ -1,4 +1,4 @@
-<%@ page import="newpcsoftapp.Consumer" %>
+<%@ page import="newpcsoftapp.Distributor" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -30,7 +30,7 @@
 						<li><a href="/newpcsoftapp/charts/history">Charts History</a></li>
 						<li><a href="#">Inbox</a></li>
 					</g:else>
-					<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
+					<li><a href="/newpcsoftapp/response/create">Create Response</a></li>
 					<li><a href="#">Devices</a></li>
                 </ul>    	   	
 			</div>
