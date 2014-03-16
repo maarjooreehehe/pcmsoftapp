@@ -24,12 +24,12 @@
 						<li><a class="logout" href="/newpcsoftapp/consumer/login">Login</a></li>
 					</g:if>
 					<g:else>
-						<li><a class="logout" href="/newpcsoftapp/consumer/logout">Logout</a></li>
+						<li><a class="logout" href="/newpcsoftapp/consumer/logout">Logout | ${session.username}</a></li>
 					</g:else>
-					<li><a href="/newpcsoftapp/complaint/create">Create</a></li>
-					<li><a href="#">Monitoring Portal</a></li>
-                    <li><a href="#">Devices</a></li>
-                    <li><a href="#">Contact Us</a></li>
+					<li><a href="/newpcsoftapp/charts/index">Monitoring Portal</a></li>
+					<li><a href="/newpcsoftapp/charts/history">Charts History</a></li>
+					<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
+					<li><a href="#">Inbox</a></li>
                 </ul>
            
                 				
