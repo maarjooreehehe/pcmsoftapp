@@ -42,7 +42,7 @@
         <div id="templatemo_content">
             
             <div class="content_box">
-            	<h2>Login</h2>
+            	<h2>Consumer Login</h2>
 				<div id="cp_contact_form">
                 <g:if test="${flash.message}">
 					<div class="message">${flash.message}</div>
