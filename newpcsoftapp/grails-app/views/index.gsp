@@ -24,6 +24,8 @@
 					<li><a href="${createLink(uri: '/')}" class="current">Home</a></li>
 					<g:if test="${!session.username}">
 						<li><a class="logout" href="/newpcsoftapp/consumer/login">Login</a></li>
+						<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
+						<li><a href="#">Devices</a></li>
 					</g:if>
 					<g:elseif test="${session.username=='distrib'}">
 						<li><a class="logout" href="/newpcsoftapp/distributor/logout">Logout | ${session.username}</a></li>
@@ -35,9 +37,10 @@
 						<li><a href="/newpcsoftapp/charts/index">Monitoring Portal</a></li>
 						<li><a href="/newpcsoftapp/charts/history">Charts History</a></li>
 						<li><a href="#">Inbox</a></li>
+						<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
+						<li><a href="#">Devices</a></li>
 					</g:else>
-					<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
-					<li><a href="#">Devices</a></li>
+					
 				</ul>
 			</div>
 			</div> <!-- end of sidebar -->
