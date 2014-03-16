@@ -1,56 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
 
-<%@ page import="newpcsoftapp.Distributor" %>
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'distributor.label', default: 'Distributor')}" />
-		<title><g:message code="default.list.label" args="[entityName]" /></title>
-	</head>
-	<body>
-		<a href="#list-distributor" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-				<g:if test="${!session.username}">
-				<li><a class="logout" href="/newpcsoftapp/distributor/login">Login</a></li>
-				</g:if>
-				<g:else>
-				<li><a class="logout" href="/newpcsoftapp/distributor/logout">Logout</a></li>
-				</g:else>
-			</ul>
-		</div>
-		<div id="list-distributor" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
-			</g:if>
-			<table>
-				<thead>
-					<tr>
-					
-						<g:sortableColumn property="username" title="${message(code: 'distributor.username.label', default: 'Username')}" />
-					
-						<g:sortableColumn property="password" title="${message(code: 'distributor.password.label', default: 'Password')}" />
-					
-					</tr>
-				</thead>
-				<tbody>
-				<g:each in="${distributorInstanceList}" status="i" var="distributorInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
-						<td><g:link action="show" id="${distributorInstance.id}">${fieldValue(bean: distributorInstance, field: "username")}</g:link></td>
-					
-						<td>${fieldValue(bean: distributorInstance, field: "password")}</td>
-					
-					</tr>
-				</g:each>
-				</tbody>
-			</table>
-			<div class="pagination">
-				<g:paginate total="${distributorInstanceTotal}" />
+<meta name="layout" content="main"/>
+<g:set var="entityName" value="${message(code: 'distributor.label', default: 'Distributor')}" />
+<title>PCMA</title>
+
+</head>
+<body>
+
+<div id="templamteo_body_wrapper">
+<div id="templatemo_wrapper">
+	<div id="templatemo_main_top"></div>
+    <div id="templatemo_main">
+    
+    	<div id="templatemo_sidebar">
+        	
+            <div id="site_title"><h1><a href="/newpcsoftapp" rel="nofollow">Website Name</a><span><a href="#" target="_blank">Power Consumption Monitoring Software Application (PCMSA)</a></span></h1></div>
+            
+           <div id="templatemo_menu">
+                 <ul>
+                     <li><a href="${createLink(uri: '/')}">Home</a></li>
+					<g:if test="${!session.username}">
+						<li><a href="/newpcsoftapp/consumer/login" class="current">Login</a></li>
+					</g:if>
+					<g:else>
+						<li><a class="logout" href="/newpcsoftapp/consumer/logout">Logout | ${session.username}</a></li>
+						<li><a href="/newpcsoftapp/response/create">Create Response</a></li>
+						<li><a href="/newpcsoftapp/response/list">Complaints Received</a></li>
+					</g:else>
+                </ul>    	   	
 			</div>
-		</div>
-	</body>
+            
+            
+            
+			
+            
+            <div class="cleaner"></div>
+        </div> <!-- end of sidebar -->
+        
+        <div id="templatemo_content">
+        	
+            <div class="content_box">
+            	<h2>Welcome to Mirax Development</h2>
+                <p>"The best part is that I know my exact energy footprint pattern and can control it. I know what is waste vs. necessity. I have completely eliminated expensive and unnecessary consumption." </br><em>-Chris Hunt, San Carlos CA</em></p>
+             
+            </div>
+            
+            
+        </div> <!-- end of content -->
+		
+		
+    	<div class="cleaner"></div>
+    </div> <!-- end of main -->
+    <div id="templatemo_footer">
+    
+        Copyright &#169; 2014 <a href="/">Mirax Development - Power Consumption Monitoring Software Application</a>
+        
+    </div> <!-- end of templatemo_footer -->
+</div> <!-- end of wrapper -->
+</div>
+<g:javascript src = "logging.js" />
+
+</body>
 </html>
+
