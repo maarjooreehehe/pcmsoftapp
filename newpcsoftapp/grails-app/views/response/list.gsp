@@ -22,19 +22,22 @@
 				<ul>
 					<li><a href="${createLink(uri: '/')}">Home</a></li>
 					<g:if test="${!session.username}">
-						<li><a href="/newpcsoftapp/consumer/login" class="current">Login</a></li>
+						<li><a class="logout" href="/newpcsoftapp/consumer/login">Login</a></li>
 					</g:if>
 					<g:else>
-						<li><a class="logout" href="/newpcsoftapp/distributor/logout">Logout | ${session.username}</a></li>
-						<li><a href="/newpcsoftapp/response/create">Create Response</a></li>
-						<li><a href="/newpcsoftapp/response/list">Complaints Received</a></li>
+						<li><a class="logout" href="/newpcsoftapp/consumer/logout">Logout | ${session.username}</a></li>
+						<li><a href="/newpcsoftapp/charts/index">Monitoring Portal</a></li>
+						<li><a href="/newpcsoftapp/charts/history">Charts History</a></li>
+						<li><a href="/newpcsoftapp/response/list" class="current">Inbox</a></li>
 					</g:else>
+					<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
+					<li><a href="#">Devices</a></li>
 				</ul>
 			</div>
 			</div> <!-- end of sidebar -->
         <div id="templatemo_content">
             <div class="content_box">
-            	<h2>Responses</h2>
+            	<h2>Responses Received</h2>
                 <table>
 				<thead>
 					<tr>

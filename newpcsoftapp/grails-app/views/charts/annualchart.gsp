@@ -29,7 +29,7 @@
 						<li><a class="logout" href="/newpcsoftapp/consumer/logout">Logout | ${session.username}</a></li>
 						<li><a href="/newpcsoftapp/charts/index">Monitoring Portal</a></li>
 						<li><a href="/newpcsoftapp/charts/history" class="current">Charts History</a></li>
-						<li><a href="#">Inbox</a></li>
+						<li><a href="/newpcsoftapp/response/list">Inbox</a></li>
 					</g:else>
 					<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
 					<li><a href="#">Devices</a></li>

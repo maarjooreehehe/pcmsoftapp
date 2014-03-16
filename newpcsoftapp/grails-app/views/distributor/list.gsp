@@ -27,7 +27,7 @@
 					<g:else>
 						<li><a class="logout" href="/newpcsoftapp/distributor/logout">Logout | ${session.username}</a></li>
 						<li><a href="/newpcsoftapp/response/create">Create Response</a></li>
-						<li><a href="/newpcsoftapp/response/list">Complaints Received</a></li>
+						<li><a href="/newpcsoftapp/complaint/list">Complaints Received</a></li>
 					</g:else>
                 </ul>    	   	
 			</div>
