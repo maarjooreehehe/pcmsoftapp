@@ -26,6 +26,7 @@
 					<g:else>
 						<li><a class="logout" href="/newpcsoftapp/consumer/logout">${session.username} | Logout</a></li>
 						<li><a href="/newpcsoftapp/charts/index">Monitoring Portal</a></li>
+						<li><a href="/newpcsoftapp/charts/history">Charts History</a></li>
 						<li><a href="#">Contact Us</a></li>
 						<li><a href="#">Inbox</a></li>
 					</g:else>
