@@ -38,7 +38,7 @@ if (typeof jQuery != 'undefined') {
 			}
 		}
 		
-		$("body").css("background", "none");
+		
 		
 		
 		

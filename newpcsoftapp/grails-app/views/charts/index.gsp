@@ -1,36 +1,73 @@
 <?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-     <head> <meta name="viewport" content="width=996px"/>
-        <title>Real-time Dual Y Axis Line Chart</title>
-		
-		
+<head>
+
+<meta name="layout" content="main"/>
+<title>PCMA</title>
+
 <g:javascript src = "Charts/FusionCharts.js" />
 <g:javascript src = "Charts/jquery.min.js" />
 <g:javascript src = "Charts/prettify.js" />
 <g:javascript src = "Charts/json2.js" />
 <g:javascript src = "Charts/lib.js" />
 <g:javascript src = "Charts/date.js" />
- 
-		<script type="text/javascript">
-			var isJSChartNotAvailable = false;
-		</script>
-<!--[if IE 6]>
-	<g:javascript src = "Charts/DD_belatedPNG_0.0.8a-min.js" />     
-        <script>
-          /* select the element name, css selector, background etc */
-          DD_belatedPNG.fix('img');
 
-          /* string argument can be any CSS selector */
-        </script>
-		  <p>&nbsp;</p>
-		  <P align="center"></P>
-        <![endif]-->
-    </head>
-    <body>
+<script type="text/javascript">
+	var isJSChartNotAvailable = false;
+</script>
+
+</head>
+<body>
+
+<div id="templamteo_body_wrapper">
+<div id="templatemo_wrapper">
+	<div id="templatemo_main_top"></div>
+    <div id="templatemo_main">
+    
+    	<div id="templatemo_sidebar">
+        	
+            <div id="site_title"><h1><a href="http://www.templatemo.com" rel="nofollow">Website Name</a><span><a target="_blank">Power Consumption Monitoring Software Application (PCMSA)</a></span></h1></div>
+            
+            <div id="templatemo_menu">
+                <ul>
+                    <li><a href="${createLink(uri: '/')}">Home</a></li>
+					<g:if test="${!session.username}">
+						<li><a class="logout" href="/newpcsoftapp/consumer/login">Login</a></li>
+					</g:if>
+					<g:else>
+						<li><a class="logout" href="/newpcsoftapp/consumer/logout">${session.username} | Logout</a></li>
+						<li><a href="/newpcsoftapp/charts/index" class="current">Monitoring Portal</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Inbox</a></li>
+					</g:else>
+                    <li><a href="#">Devices</a></li>
+                </ul>
+
+			</div>
+            
+            <div class="sb_box">
+	            <h3>Search</h3>
+            	<div id="search">
+                    <form action="#" method="get">
+                        <input type="text" value="Search" name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                        <input type="submit" name="Search" value="Search" id="searchbutton" title="Search" />
+                    </form>
+				</div>
+            </div>
+            
+			
+            
+            <div class="cleaner"></div>
+        </div> <!-- end of sidebar -->
         
-	<h3> Real-time Monitoring of Power Consumption </h3>
-		
-		<g:javascript src = "Charts/RTLineDY.js" />        
+        <div id="templatemo_content">
+            
+            <div class="content_box">
+            	<h2>Real-time Monitoring of Power Consumption</h2>
+                <div class="cleaner"></div>				
+				
+				<g:javascript src = "Charts/RTLineDY.js" />        
         
 		<div id="chartdiv" align="center">Chart will load here</div>
         
@@ -64,10 +101,22 @@
 				var dateTimeLabel = new Date().toString("HH:mm:ss");
 				if(updater) updater.feedData("&label=" + dateTimeLabel + "&value=" + p + "|" + v + "|" + s);
 			}
-		
 			
         </script>
+         
+			</div> <!-- end of content -->
 		
-     </body>
-	 
- </html>
+		
+    	<div class="cleaner"></div>
+    </div> <!-- end of main -->
+    <div id="templatemo_footer">
+    
+        Copyright &#169; 2014 <a href="/">Mirax Development - Power Consumption Monitoring Software Application</a>
+        
+    </div> <!-- end of templatemo_footer -->
+</div> <!-- end of wrapper -->
+</div>
+<g:javascript src = "logging.js" />
+
+</body>
+</html>

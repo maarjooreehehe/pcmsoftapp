@@ -22,9 +22,7 @@
                 <ul>
                     <li><a href="${createLink(uri: '/')}">Home</a></li>
 					<li><a href="/newpcsoftapp/consumer/login" class="current">Login</a></li>
-                    <li><a href="#">Monitoring Portal</a></li>
                     <li><a href="#">Devices</a></li>
-                    <li><a href="#">Contact Us</a></li>
                 </ul>    	
 			</div>
             
