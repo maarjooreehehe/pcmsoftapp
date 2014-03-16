@@ -20,34 +20,21 @@
             <div id="site_title"><h1><a href="http://www.templatemo.com" rel="nofollow">Website Name</a><span><a target="_blank">Power Consumption Monitoring Software Application (PCMSA)</a></span></h1></div>
             
             <div id="templatemo_menu">
-                <ul>
-                    <li><a href="${createLink(uri: '/')}" class="current">Home</a></li>
+                 <ul>
+                    <li><a href="${createLink(uri: '/')}">Home</a></li>
 					<g:if test="${!session.username}">
-						<li><a class="logout" href="/newpcsoftapp/consumer/login">Login</a></li>
+						<li><a href="/newpcsoftapp/consumer/login">Login</a></li>
 					</g:if>
 					<g:else>
-						<li><a class="logout" href="/newpcsoftapp/consumer/logout">${session.username} | Logout</a></li>
+						<li><a class="logout" href="/newpcsoftapp/consumer/logout">Logout | ${session.username}</a></li>
 						<li><a href="/newpcsoftapp/charts/index">Monitoring Portal</a></li>
 						<li><a href="/newpcsoftapp/charts/history" class="current">Charts History</a></li>
-						<li><a href="#">Contact Us</a></li>
 						<li><a href="#">Inbox</a></li>
 					</g:else>
-                    <li><a href="#">Devices</a></li>
-                </ul>
-
+					<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
+					<li><a href="#">Devices</a></li>
+                </ul>    	   	
 			</div>
-            
-            <div class="sb_box">
-	            <h3>Search</h3>
-            	<div id="search">
-                    <form action="#" method="get">
-                        <input type="text" value="Search" name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
-                        <input type="submit" name="Search" value="Search" id="searchbutton" title="Search" />
-                    </form>
-				</div>
-            </div>
-            
-			
             
             <div class="cleaner"></div>
         </div> <!-- end of sidebar -->

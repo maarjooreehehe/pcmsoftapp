@@ -26,26 +26,15 @@
 					</g:if>
 					<g:else>
 						<li><a class="logout" href="/newpcsoftapp/consumer/logout">Logout | ${session.username}</a></li>
+						<li><a href="/newpcsoftapp/charts/index">Monitoring Portal</a></li>
+						<li><a href="/newpcsoftapp/charts/history">Charts History</a></li>
+						<li><a href="#">Inbox</a></li>
 					</g:else>
-                    <li><a href="/newpcsoftapp/charts/index">Monitoring Portal</a></li>
-					<li><a href="/newpcsoftapp/charts/history">Charts History</a></li>
 					<li><a href="/newpcsoftapp/complaint/create" class="current">Contact Us</a></li>
-					<li><a href="#">Inbox</a></li>
 					<li><a href="#">Devices</a></li>
                 </ul>    	
 			</div>
             
-            <div class="sb_box">
-	            <h3>Search</h3>
-            	<div id="search">
-                    <form action="#" method="get">
-                        <input type="text" value="Search" name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
-                        <input type="submit" name="Search" value="Search" id="searchbutton" title="Search" />
-                    </form>
-				</div>
-            </div>
-            
-			
             
             <div class="cleaner"></div>
         </div> <!-- end of sidebar -->
@@ -54,7 +43,10 @@
             
             <div class="content_box">
             	<h2>Contact Us</h2>
-				<p><em>Worries? Concerns? Complaints?</em></br>  Send it to us now. Please feel free to fill up the form below. You can also reach us via the contact informations listed below. It is always our pleasure to serve you.</p>
+				<p><em>Worries? Concerns? Complaints?</em></br>  
+				Send it to us now. Please feel free to reach us via the contact informations listed below. 
+				<g:if test="${!session.username}">Or <a href="/newpcsoftapp/consumer/login">login</a> now to send us a form for your concerns.</g:if>
+				It is always our pleasure to serve you.</p>
 				
 				<div class="col_w280 float_l" id="map">
                     <h3>Map</h3>
@@ -74,10 +66,11 @@
 
                 </div>
                 <div class="cleaner"></div>				
+				
+			<g:if test="${session.username}">	
 				<div id="cp_contact_form">
 				</br>
 				<h4>Quick Contact Form</h4>
-				
                 <g:if test="${flash.message}">
 					<div class="message">${flash.message}</div>
 				</g:if>
@@ -93,7 +86,7 @@
 					<g:submitButton name="create" class="save" class="submit_btn float_l" value="${message(code: 'default.button.create.label', default: 'Create')}" />
 				</g:form>
 				</div>
-            
+            </g:if>
          
 			</div> <!-- end of content -->
 		

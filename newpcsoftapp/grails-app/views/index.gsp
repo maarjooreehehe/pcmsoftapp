@@ -29,13 +29,13 @@
 						<li><a class="logout" href="/newpcsoftapp/consumer/logout">Logout | ${session.username}</a></li>
 						<li><a href="/newpcsoftapp/charts/index">Monitoring Portal</a></li>
 						<li><a href="/newpcsoftapp/charts/history">Charts History</a></li>
-						<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
 						<li><a href="#">Inbox</a></li>
 					</g:else>
+					<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
 					<li><a href="#">Devices</a></li>
 				</ul>
 			</div>
-		</div> <!-- end of sidebar -->
+			</div> <!-- end of sidebar -->
         <div id="templatemo_content">
             <div id="slider">
             	<img src="images/slideshow/ILPIHotlines.jpg" alt="Image 5" title="We are just one call away! We are so dear to serve you. :)" />
