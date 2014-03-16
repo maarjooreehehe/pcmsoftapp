@@ -31,7 +31,7 @@
             
             <div id="templatemo_menu">
                 <ul>
-                    <li><a href="${createLink(uri: '/')}" class="current">Home</a></li>
+                    <li><a href="${createLink(uri: '/')}">Home</a></li>
 					<g:if test="${!session.username}">
 						<li><a class="logout" href="/newpcsoftapp/consumer/login">Login</a></li>
 					</g:if>

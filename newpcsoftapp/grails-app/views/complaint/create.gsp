@@ -29,8 +29,9 @@
 					</g:else>
                     <li><a href="/newpcsoftapp/charts/index">Monitoring Portal</a></li>
 					<li><a href="/newpcsoftapp/charts/history">Charts History</a></li>
-					<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
+					<li><a href="/newpcsoftapp/complaint/create" class="current">Contact Us</a></li>
 					<li><a href="#">Inbox</a></li>
+					<li><a href="#">Devices</a></li>
                 </ul>    	
 			</div>
             
