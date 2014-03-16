@@ -29,6 +29,20 @@
 								
 								</td>
 							</tr>
+							<tr class='prop'>
+								<td valign='top' class='name'>
+								<center>	<label for='password'>Confirm Password:</label></center>
+								</td></br>
+								<td valign='top' class='value '>
+									<input type="password" maxlength='8'
+									name='password2'
+									value='${consumer?.password2}'
+									class="required input_field"
+									>
+									</input>
+								
+								</td>
+							</tr>
 						</table>
 </div>
 					

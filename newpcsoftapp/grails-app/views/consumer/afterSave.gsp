@@ -46,18 +46,18 @@
         
         <div id="templatemo_content">
         	
-            <div id="slider">
+<!--            <div id="slider">
             	<img src="images/slideshow/ILPIHotlines.jpg" alt="Image 5" title="We are just one call away! We are so dear to serve you. :)" />
 				<img src="images/slideshow/PayOnline.jpg" alt="Image 1" title="Pay your bills online. It is fast and easy!" />
                 <img src="images/slideshow/ElectricSafety Tips.jpg" alt="Image 2" title="Tip: Avoid flying kites near electric transmission and distribution lines." />
                 <img src="images/slideshow/RA7832.jpg" alt="Image 3" title="Do not steal electricity. Be a responsible citizen!" />
                 <img src="images/slideshow/OfficeHours.jpg" alt="Image 4" title="Inquire to us now. We are so excited to serve you. :)" />
         	</div>
-            
+-->
             <div class="content_box">
             	<h2>Welcome to Mirax Development</h2>
                 <p>"The best part is that I know my exact energy footprint pattern and can control it. I know what is waste vs. necessity. I have completely eliminated expensive and unnecessary consumption." </br><em>-Chris Hunt, San Carlos CA</em></p>
-             
+				Login <a href="/newpcsoftapp/consumer/login">here</a> to continue.
             </div>
             
             

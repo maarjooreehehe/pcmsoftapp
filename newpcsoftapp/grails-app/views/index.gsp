@@ -24,7 +24,7 @@
 						<li><a class="logout" href="/newpcsoftapp/consumer/login">Login</a></li>
 					</g:if>
 					<g:else>
-						<li><a class="logout" href="/newpcsoftapp/consumer/logout">Logout</a></li>
+						<li><a class="logout" href="/newpcsoftapp/consumer/logout">${session.username} | Logout</a></li>
 					</g:else>
 					<li><a href="#">Monitoring Portal</a></li>
                     <li><a href="#">Devices</a></li>

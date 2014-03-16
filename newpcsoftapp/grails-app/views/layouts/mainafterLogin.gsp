@@ -54,7 +54,7 @@
 		<g:layoutBody/>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<g:javascript library="application"/>
-		<li><a href="/newpcsoftapp/consumer/logout">Logout</a></li>
+<!--		<li><a href="/newpcsoftapp/consumer/logout">Logout</a></li> -->
 		<r:layoutResources />
 	</body>
 </html>
