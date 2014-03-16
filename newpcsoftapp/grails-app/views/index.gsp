@@ -25,6 +25,11 @@
 					<g:if test="${!session.username}">
 						<li><a class="logout" href="/newpcsoftapp/consumer/login">Login</a></li>
 					</g:if>
+					<g:elseif test="${session.username=='distrib'}">
+						<li><a class="logout" href="/newpcsoftapp/distributor/logout">Logout | ${session.username}</a></li>
+						<li><a href="/newpcsoftapp/response/create">Create Response</a></li>
+						<li><a href="/newpcsoftapp/response/list">Complaints Received</a></li>
+					</g:elseif>
 					<g:else>
 						<li><a class="logout" href="/newpcsoftapp/consumer/logout">Logout | ${session.username}</a></li>
 						<li><a href="/newpcsoftapp/charts/index">Monitoring Portal</a></li>
