@@ -61,7 +61,7 @@
 							</a>
                             <span>Weekly Chart</span>
                             This chart represents the visual graphical history of current usage in weekly basis.
-                            <a href="#">View more..</a>
+                            <a href="/newpcsoftapp/charts/weeklychart">View more..</a>
                         
                         </li>
                         <li>
@@ -70,7 +70,7 @@
 							</a>
                             <span>Monthly Chart</span>
                             This chart represents the visual graphical history of current usage in monthly basis..
-                            <a href="#">View more...</a>
+                            <a href="/newpcsoftapp/charts/monthlychart">View more...</a>
                         
                         </li>
 						<li>
@@ -79,7 +79,7 @@
 							</a>
                             <span>Annual Chart</span>
                             This chart represents the visual graphical history of current usage in yearly basis..
-                            <a href="#">View more...</a>
+                            <a href="/newpcsoftapp/charts/annualchart">View more...</a>
                         
                         </li>
                         
