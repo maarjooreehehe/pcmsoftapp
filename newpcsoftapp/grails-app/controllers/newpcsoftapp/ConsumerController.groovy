@@ -147,9 +147,8 @@ class ConsumerController {
 		def consumer = Consumer.findByUsernameAndPassword(params.username,params.password)
 		if (consumer) {
 			session.username = consumer.username
-			//redirect(controller:'room')
 			def redirectParams =session.originalRequestParams?session.originalRequestParams:[controller:'consumer']
-			redirect(controller: 'consumer', action:'logoutPage')
+			redirect(controller: 'charts', action:'index')
 		}
 
 		else {

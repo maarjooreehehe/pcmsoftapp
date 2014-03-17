@@ -112,7 +112,7 @@ class DistributorController {
 			session.username = distributor.username
 			//redirect(controller:'room')
 			def redirectParams =session.originalRequestParams?session.originalRequestParams:[controller:'distributor']
-			redirect(controller: 'distributor', action: 'index')
+			redirect(controller: 'complaint', action:'list')
 			}
 		
 		else {
