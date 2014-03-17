@@ -26,7 +26,7 @@
 					<g:else>
 						<li><a class="logout" href="/newpcsoftapp/consumer/logout">${session.username} | Logout</a></li>
 					</g:else>
-					<li><a href="#">Monitoring Portal</a></li>
+					<li><a href="/newpcsoftapp/consumer/sent">Monitoring Portal</a></li>
                     <li><a href="#">Devices</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>

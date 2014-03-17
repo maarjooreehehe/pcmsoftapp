@@ -40,6 +40,16 @@ class ConsumerController {
 
         [consumerInstance: consumerInstance]
     }
+		def sent(Long id) {
+        def consumerInstance = Consumer.get(id)
+        if (!consumerInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'consumer.label', default: 'Consumer'), id])
+            redirect(controller: "complaint", action: "list")
+            return
+        }
+
+        [consumerInstance: consumerInstance]
+    }
 	
 		def logoutPage(Long id) {
         def consumerInstance = Consumer.get(id)

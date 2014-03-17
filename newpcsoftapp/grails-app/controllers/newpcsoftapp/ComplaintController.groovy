@@ -21,13 +21,13 @@ class ComplaintController {
 
     def save() {
         def complaintInstance = new Complaint(params)
-        if (!complaintInstance.save(flush: true)) {
-            render(view: "create", model: [complaintInstance: complaintInstance])
+            if (!postadInstance.save(flush: true)) {
+            render(view: "create", model: [postadInstance: postadInstance])
             return
         }
 
-        flash.message = message(code: 'default.created.message', args: [message(code: 'complaint.label', default: 'Complaint'), complaintInstance.id])
-        redirect(action: "show", id: complaintInstance.id)
+        redirect(action:"show", id:postadInstance.id)
+
     }
 
     def show(Long id) {

@@ -26,3 +26,4 @@
 	<g:textField name="body" value="${complaintInstance?.body}"/>
 </div>
 
+
