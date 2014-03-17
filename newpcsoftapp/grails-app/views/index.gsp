@@ -40,17 +40,16 @@
 						<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
 						<li><a href="#">Devices</a></li>
 					</g:else>
-<<<<<<< HEAD
 					<li><a href="/newpcsoftapp/consumer/sent">Monitoring Portal</a></li>
                     <li><a href="#">Devices</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
            
                 				
-=======
+
 					
 				</ul>
->>>>>>> 6a0ec4adb84072e25f69971ab53618a146cbc18c
+
 			</div>
 			</div> <!-- end of sidebar -->
         <div id="templatemo_content">

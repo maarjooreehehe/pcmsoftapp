@@ -16,14 +16,14 @@ environments {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:postgresql://localhost/newpcsoftapp"
 			driverClassName = "org.postgresql.Driver"
-<<<<<<< HEAD
+
 		         username = "postgres"
 				 password = "postgres"
 
-=======
+
 		     username = "postgres"
 			 password = "postgres"
->>>>>>> 6a0ec4adb84072e25f69971ab53618a146cbc18c
+
 
         }
     }
@@ -32,14 +32,14 @@ environments {
             dbCreate = "update"
             url = "jdbc:postgresql://localhost/newpcsoftapp"
 			driverClassName = "org.postgresql.Driver"
-<<<<<<< HEAD
+
 		         username = "postgres"
 				 password = "postgres"
 
-=======
+
 		     username = "postgres"
 			 password = "postgres"
->>>>>>> 6a0ec4adb84072e25f69971ab53618a146cbc18c
+
 
 			}
     }
@@ -48,14 +48,13 @@ environments {
             dbCreate = "update"
             url = "jdbc:postgresql://localhost/newpcsoftapp"
 			driverClassName = "org.postgresql.Driver"
-<<<<<<< HEAD
+
 		         username = "postgres"
 				password = "postgres"
 
-=======
 		     username = "postgres"
 			 password = "postgres"
->>>>>>> 6a0ec4adb84072e25f69971ab53618a146cbc18c
+
             pooled = true
             properties {
                maxActive = -1
