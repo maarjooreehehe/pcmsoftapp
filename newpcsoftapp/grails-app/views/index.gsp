@@ -40,9 +40,6 @@
 						<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
 						<li><a href="#">Devices</a></li>
 					</g:else>
-					<li><a href="/newpcsoftapp/consumer/sent">Monitoring Portal</a></li>
-                    <li><a href="#">Devices</a></li>
-                    <li><a href="#">Contact Us</a></li>
                 </ul>
            
                 				
