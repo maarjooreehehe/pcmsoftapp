@@ -28,7 +28,7 @@
 						<li><a class="logout" href="/newpcsoftapp/consumer/logout">Logout | ${session.username}</a></li>
 						<li><a href="/newpcsoftapp/charts/index">Monitoring Portal</a></li>
 						<li><a href="/newpcsoftapp/charts/history">Charts History</a></li>
-						<li><a href="/newpcsoftapp/response/list" class="current">Inbox</a></li>
+						<li><a href="/newpcsoftapp/response/list/${session.username}" class="current">Inbox</a></li>
 					</g:else>
 					<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
 					<li><a href="#">Devices</a></li>
@@ -53,6 +53,8 @@
 				<tbody>
 				<g:each in="${responseInstanceList}" status="i" var="responseInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+					
 					
 						<td><g:link action="show" id="${responseInstance.id}">${fieldValue(bean: responseInstance, field: "dateCreated")}</g:link></td>
 					

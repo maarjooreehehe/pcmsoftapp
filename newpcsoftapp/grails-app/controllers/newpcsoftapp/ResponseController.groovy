@@ -13,8 +13,12 @@ class ResponseController {
     }
 
     def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        [responseInstanceList: Response.list(params), responseInstanceTotal: Response.count()]
+	
+		def owner = Consumer.find("from Consumer as consumer where consumer.username=:username",[username:params.id]);
+		
+		def responses = Response.findAll("from Response as res where res.complaint.owner=:owner",[owner:owner]);
+
+        [responseInstanceList: responses, responseInstanceTotal: Response.count()]
     }
 
     def create(Long id) {

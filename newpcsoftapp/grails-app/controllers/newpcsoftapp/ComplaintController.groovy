@@ -27,7 +27,6 @@ class ComplaintController {
 		String subject = params.subject;
 		String body = params.body;
 		
-		println subject + " "+ body;
 		def consumer = Consumer.find("from Consumer as consumer where consumer.username=:username",[username:params.consumer])
 
 		def date = new Date();
