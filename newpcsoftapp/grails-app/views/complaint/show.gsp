@@ -51,6 +51,7 @@
 			
 		<table>
 		<td>
+			<b>Owner:</b>		<g:fieldValue bean="${complaintInstance}" field="owner"/><br>
 			<b>Subject:</b>		<g:fieldValue bean="${complaintInstance}" field="subject"/><br>
 			<b>Type of Message:</b>		<g:fieldValue bean="${complaintInstance}" field="messageType"/><br>
 			<b>Body:</b>		<g:fieldValue bean="${complaintInstance}" field="body"/><br>

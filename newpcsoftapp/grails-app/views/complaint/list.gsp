@@ -52,12 +52,15 @@
 					</tr>
 				</thead>
 				<tbody>
+				
 				<g:each in="${complaintInstanceList}" status="i" var="complaintInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${complaintInstance.id}">${fieldValue(bean: complaintInstance, field: "dateCreated")}</g:link></td>
+						<td><g:formatDate format="MM-dd-yyyy" date="${complaintInstance?.dateCreated}" /></td>
 					
-						<td>${fieldValue(bean: complaintInstance, field: "subject")}</td>
+						<td><g:link action="show" id="${complaintInstance.id}">${fieldValue(bean: complaintInstance, field: "subject")}</g:link></td>
+					
+						<%--<td>${fieldValue(bean: complaintInstance, field: "subject")}</td>--%>
 					
 						<td>${fieldValue(bean: complaintInstance, field: "messageType")}</td>
 					
@@ -69,7 +72,11 @@
 				</g:each>
 				</tbody>
 			</table>
+	<div class="pagination">
+		<g:paginate total="${complaintInstanceTotal}" />
+	</div>
              </div>
+			 
 		</div> <!-- end of content -->
    	<div class="cleaner"></div>
     </div> <!-- end of main -->
@@ -77,6 +84,7 @@
 			Copyright &#169; 2014 <a href="/">Mirax Development - Power Consumption Monitoring Software Application</a>
 		</div> <!-- end of templatemo_footer -->
 	</div> <!-- end of wrapper -->
+	
 	</div>
 	<g:javascript src = "logging.js" />
 </body>

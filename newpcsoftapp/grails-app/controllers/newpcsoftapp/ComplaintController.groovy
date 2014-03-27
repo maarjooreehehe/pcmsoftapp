@@ -12,7 +12,10 @@ class ComplaintController {
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        [complaintInstanceList: Complaint.list(params), complaintInstanceTotal: Complaint.count()]
+		
+		def complaint = Complaint.list(params)
+		
+        [complaintInstanceList: complaint, complaintInstanceTotal: Complaint.count()]
     }
 
     def create() {
