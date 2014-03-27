@@ -83,6 +83,7 @@
 				<div class="dialog" align="left">
 					<g:render template="form"/>
 				</div>
+					<input type="hidden" name="consumer" value="${session.username}"/>
 					<g:submitButton name="create" class="save" class="submit_btn float_l" value="${message(code: 'default.button.create.label', default: 'Create')}" />
 				</g:form>
 				</div>

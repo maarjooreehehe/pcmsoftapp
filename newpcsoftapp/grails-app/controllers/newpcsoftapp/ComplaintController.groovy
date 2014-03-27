@@ -16,17 +16,28 @@ class ComplaintController {
     }
 
     def create() {
-        [complaintInstance: new Complaint(params)]
+        
+		[complaintInstance: new Complaint(params)]
     }
 
     def save() {
-        def complaintInstance = new Complaint(params)
-            if (!postadInstance.save(flush: true)) {
-            render(view: "create", model: [postadInstance: postadInstance])
+		
+		
+		String messageType = params.messageType;
+		String subject = params.subject;
+		String body = params.body;
+		
+		println subject + " "+ body;
+		def consumer = Consumer.find("from Consumer as consumer where consumer.username=:username",[username:params.consumer])
+
+		def date = new Date();
+		def complaintInstance = new Complaint(owner:consumer,dateCreated:date,messageType:messageType,subject:subject,body:body)
+            if (complaintInstance.save(flush: true) && complaintInstance.validate()) {
+            render(view: "show", model: [complaintInstance: complaintInstance])
             return
         }
-
-        redirect(action:"show", id:postadInstance.id)
+		
+        redirect(action:"show", id:complaintInstance.id)
 
     }
 

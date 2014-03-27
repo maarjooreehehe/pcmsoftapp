@@ -10,7 +10,6 @@ class Consumer {
 	
 	static hasMany = [complaint: Complaint]
 	
-	String toString() { return username}
 
     static constraints = {
 	username(unique:true)
