@@ -20,7 +20,7 @@
 			</div>
 			<div id="templatemo_menu">
 				<ul>
-					<li><a href="${createLink(uri: '/')}" class="current">Home</a></li>
+					<li><a href="${createLink(uri: '/')}">Home</a></li>
 					<g:if test="${!session.username}">
 						<li><a class="logout" href="/newpcsoftapp/consumer/login">Login</a></li>
 						<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
@@ -29,14 +29,14 @@
 					<g:elseif test="${session.username=='distrib'}">
 						<li><a class="logout" href="/newpcsoftapp/distributor/logout">Logout | ${session.username}</a></li>
 						<li><a href="/newpcsoftapp/response/create">Create Response</a></li>
-						<li><a href="/newpcsoftapp/complaint/list">Complaints Received</a></li>
+						<li><a href="/newpcsoftapp/complaint/list" class="current">Complaints Received</a></li>
 					</g:elseif>
 					<g:else>
 						<li><a class="logout" href="/newpcsoftapp/consumer/logout">Logout | ${session.username}</a></li>
 						<li><a href="/newpcsoftapp/charts/index">Monitoring Portal</a></li>
 						<li><a href="/newpcsoftapp/charts/history">Charts History</a></li>
 						<li><a href="/newpcsoftapp/response/list/${session.username}">Inbox</a></li>
-						<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
+						<li><a href="/newpcsoftapp/complaint/create" class="current">Contact Us</a></li>
 						<li><a href="#">Devices</a></li>
 					</g:else>
                 </ul>
@@ -59,56 +59,7 @@
 		</td>
 		</table>
 		
-<%--
-			<ol class="property-list complaint">
-			
-				<g:if test="${complaintInstance?.dateCreated}">
-				<li class="fieldcontain">
-					<span id="dateCreated-label" class="property-label"><g:message code="complaint.dateCreated.label" default="Date Created" /></span>
-					
-						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${complaintInstance?.dateCreated}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${complaintInstance?.subject}">
-				<li class="fieldcontain">
-					<span id="subject-label" class="property-label"><g:message code="complaint.subject.label" default="Subject" /></span>
-					
-						<span class="property-value" aria-labelledby="subject-label"><g:fieldValue bean="${complaintInstance}" field="subject"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${complaintInstance?.messageType}">
-				<li class="fieldcontain">
-					<span id="messageType-label" class="property-label"><g:message code="complaint.messageType.label" default="Message Type" /></span>
-					
-						<span class="property-value" aria-labelledby="messageType-label"><g:fieldValue bean="${complaintInstance}" field="messageType"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${complaintInstance?.body}">
-				<li class="fieldcontain">
-					<span id="body-label" class="property-label"><g:message code="complaint.body.label" default="Body" /></span>
-					
-						<span class="property-value" aria-labelledby="body-label"><g:fieldValue bean="${complaintInstance}" field="body"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${complaintInstance?.owner}">
-				<li class="fieldcontain">
-					<span id="owner-label" class="property-label"><g:message code="complaint.owner.label" default="Owner" /></span>
-					
-						<span class="property-value" aria-labelledby="owner-label"><g:link controller="consumer" action="show" id="${complaintInstance?.owner?.id}">${complaintInstance?.owner?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-			</ol>
---%>
+
 			
 		<br>
 		<g:form>

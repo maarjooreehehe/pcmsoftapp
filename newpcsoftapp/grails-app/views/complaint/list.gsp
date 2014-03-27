@@ -22,14 +22,24 @@
 				<ul>
 					<li><a href="${createLink(uri: '/')}">Home</a></li>
 					<g:if test="${!session.username}">
-						<li><a href="/newpcsoftapp/consumer/login" class="current">Login</a></li>
+						<li><a class="logout" href="/newpcsoftapp/consumer/login">Login</a></li>
+						<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
+						<li><a href="#">Devices</a></li>
 					</g:if>
-					<g:else>
+					<g:elseif test="${session.username=='distrib'}">
 						<li><a class="logout" href="/newpcsoftapp/distributor/logout">Logout | ${session.username}</a></li>
 						<li><a href="/newpcsoftapp/response/create">Create Response</a></li>
-						<li><a href="/newpcsoftapp/complaint/list">Complaints Received</a></li>
+						<li><a href="/newpcsoftapp/complaint/list" class="current">Complaints Received</a></li>
+					</g:elseif>
+					<g:else>
+						<li><a class="logout" href="/newpcsoftapp/consumer/logout">Logout | ${session.username}</a></li>
+						<li><a href="/newpcsoftapp/charts/index">Monitoring Portal</a></li>
+						<li><a href="/newpcsoftapp/charts/history">Charts History</a></li>
+						<li><a href="/newpcsoftapp/response/list/${session.username}">Inbox</a></li>
+						<li><a href="/newpcsoftapp/complaint/create">Contact Us</a></li>
+						<li><a href="#">Devices</a></li>
 					</g:else>
-				</ul>
+                </ul>  	
 			</div>
 			</div> <!-- end of sidebar -->
         <div id="templatemo_content">
@@ -39,7 +49,7 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="dateCreated" title="${message(code: 'complaint.dateCreated.label', default: 'Date Created')}" />
+						<g:sortableColumn property="dateCreated" title="${message(code: 'complaint.dateCreated.label', default: 'Date Received')}" />
 					
 						<g:sortableColumn property="subject" title="${message(code: 'complaint.subject.label', default: 'Subject')}" />
 					
@@ -59,8 +69,6 @@
 						<td><g:formatDate format="MM-dd-yyyy" date="${complaintInstance?.dateCreated}" /></td>
 					
 						<td><g:link action="show" id="${complaintInstance.id}">${fieldValue(bean: complaintInstance, field: "subject")}</g:link></td>
-					
-						<%--<td>${fieldValue(bean: complaintInstance, field: "subject")}</td>--%>
 					
 						<td>${fieldValue(bean: complaintInstance, field: "messageType")}</td>
 					
@@ -89,29 +97,4 @@
 	<g:javascript src = "logging.js" />
 </body>
 </html>
-
-
-
-<%--
-	<body>
-		<a href="#list-complaint" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
-		<div id="list-complaint" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
-			</g:if>
-			
-			<div class="pagination">
-				<g:paginate total="${complaintInstanceTotal}" />
-			</div>
-		</div>
-	</body>
-</html>
---%>
 

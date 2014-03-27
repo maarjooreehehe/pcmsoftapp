@@ -42,29 +42,31 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="dateCreated" title="${message(code: 'response.dateCreated.label', default: 'Date Created')}" />
-					
+						<th><g:message code="response.complaint.label" default="Complaint" /></th>
+										
 						<g:sortableColumn property="body" title="${message(code: 'response.body.label', default: 'Body')}" />
 					
-						<th><g:message code="response.complaint.label" default="Complaint" /></th>
-					
+						<g:sortableColumn property="dateCreated" title="${message(code: 'response.dateCreated.label', default: 'Date Received')}" />
+						
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${responseInstanceList}" status="i" var="responseInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-					
-					
-						<td><g:link action="show" id="${responseInstance.id}">${fieldValue(bean: responseInstance, field: "dateCreated")}</g:link></td>
+						<td><g:link action="show" id="${responseInstance.id}">${fieldValue(bean: responseInstance, field: "complaint")}</g:link></td>
 					
 						<td>${fieldValue(bean: responseInstance, field: "body")}</td>
 					
-						<td>${fieldValue(bean: responseInstance, field: "complaint")}</td>
+						<td><g:formatDate format="MM-dd-yyyy" date="${responseInstance?.dateCreated}" /></td>
 					
 					</tr>
 				</g:each>
 				</tbody>
+				
+				
+				
+			
 			</table>
             </div>
 		</div> <!-- end of content -->
