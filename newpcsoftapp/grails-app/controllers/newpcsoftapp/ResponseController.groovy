@@ -27,6 +27,7 @@ class ResponseController {
     }
 
     def save() {
+
         def responseInstance = new Response(params)
         if (!responseInstance.save(flush: true)) {
             render(view: "create", model: [responseInstance: responseInstance])
